@@ -226,6 +226,3 @@ list_2 = [2,3,5,6,7,8]
 common = list(filter(lambda x: x in list_2, list_1))
 print(common)
 # OUTPUT: [2, 3, 5, 7]
-
-
-
