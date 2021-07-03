@@ -159,4 +159,31 @@ for x in range(10):
 print(ddd)
 # OUTPUT: {0: 0, 1: 1, 2: 8, 3: 3, 4: 64, 5: 5, 6: 216, 7: 7, 8: 512, 9: 9}
 
+# LAMBDA:
+# (7)
+# def foo(x, y):
+#     if x < y:
+#         return x
+#     else:
+#         return y
+#
+# (8)
+# foo = lambda x, y, z: z if y < x and x > z else y
+
+# 18. Convert (7) to lambda function
+foo = lambda x, y: x if x < y else y
+print(foo(5, 3))
+# OUTPUT: 3
+
+# 19*. Convert (8) to regular function
+def foo(x, y, z):
+    if y < x and x > z:
+        return z
+    else:
+        return y
+print(foo(5, 3, 1))
+# OUTPUT: 1
+
+
+
 
