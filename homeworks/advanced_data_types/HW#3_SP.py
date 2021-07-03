@@ -202,8 +202,8 @@ print(list(map(lambda x: x * 2, lst_to_sort)))
 # 23*. Raise each list number to the corresponding number on another list:
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
-print(list(map(lambda x, y: x * y, list_A, list_B)))
-# OUTPUT: [10, 18, 28]
+print(list(map(lambda x, y: x ** y, list_A, list_B)))
+# OUTPUT: [32, 729, 16384]
 
 # 24. Use reduce and lambda to compute the numbers of a lst_to_sort.
 from functools import reduce
