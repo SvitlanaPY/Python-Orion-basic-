@@ -10,8 +10,7 @@ print('########## 1 ##########')
 
 class Laptop:  # container
     def __init__(self):
-        bt = Battery(50)
-        self.battery = bt
+        self.battery = Battery(50)
 
 class Battery:
     def __init__(self, charge_level=100):
@@ -58,8 +57,7 @@ class Calc:
 
     @staticmethod
     def add_nums(a, b, c):
-        summa = a + b + c
-        return summa
+        return a + b + c
 
 addnums = Calc()
 print(addnums.add_nums(1, 2, 3))
