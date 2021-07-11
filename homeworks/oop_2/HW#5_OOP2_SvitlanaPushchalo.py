@@ -182,3 +182,113 @@ print('address:', ab.address)
 # OUTPUT: address: 123 Main St, Pasadena, CA
 
 
+print('\n########## 8 ##########')
+# class AddressBook:
+#     """
+#     Create regular class taking 7 params on init - key, name, phone_number, address, email, birthday, age
+#     Make its str() representation the same as for AddressBookDataClass defined above.
+#     """
+
+class AddressBook:
+    def __init__(self, key, name, phone_number, address, email, birthday, age):
+        self.key = key
+        self.name = name
+        self.phone_number = phone_number
+        self.address = address
+        self.email = email
+        self.birthday = birthday
+        self.age = age
+    def __str__(self):
+        return f"AddressBook(key={self.key}, name='{self.name}', phone_number='{self.phone_number}', address='{self.address}', email='{self.email}', birthday='{self.birthday}', age='{self.age}')"
+
+a_b = AddressBook(10, 'John Smith', '(888) 558-9004', '123 Main St, Pasadena, CA', ' jsmith@comcast.net', '01 January 2000', 21)
+print(a_b)
+# OUTPUT: AddressBook(key=10, name='John Smith', phone_number='(888) 558-9004', address='123 Main St, Pasadena, CA', email=' jsmith@comcast.net', birthday='01 January 2000', age='21')
+
+
+print('\n########## 9 ##########')
+# class Person:
+#     """
+#     Change the value of the age property of the person object
+#     """
+#     name = "John"
+#     age = 36
+#     country = "USA"
+
+class Person:
+    def __init__(self, name, country, age = 0):
+        self.name = name
+        self.country = country
+        self.age = age
+
+    @property
+    def age(self):
+        # print('Get age')
+        return self._age
+
+    @age.setter
+    def age(self, new_age):
+        # print('Set age')
+        self._age = new_age
+
+person = Person('John', 'USA', 36)
+print(person.age)
+# OUTPUT: 36
+person.age = 25   # save value in property age (call setter)
+print('new age=', person.age)
+# OUTPUT: new age= 25
+
+
+print('\n########## 10 ##########')
+# class Student:
+#     """
+#     Add an 'email' attribute of the object student and set its value
+#     Assign the new attribute to 'student_email' variable and print it by using getattr
+#     """
+#     id = 0
+#     name = ""
+#
+#     def __init__(self, id, name):
+#         self.id = id
+#         self.name = name
+
+class Student:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+student = Student(101, 'Jim')
+setattr(student, 'email', 'email_1@gmail.com')
+student_email = 'email_2@gmail.com'        # create 'student_email' variable
+setattr(student, 'email', student_email)
+print('student.email=', getattr(student, "email"))
+# OUTPUT: student.email= email2@gmail.com
+
+
+print('\n########## 11* ##########')
+# class Celsius:
+#     """
+#     By using @property convert the celsius to fahrenheit
+#     Hint: (temperature * 1.8) + 32)
+#     """
+#     def __init__(self, temperature=0):
+#         self._temperature = temperature
+#
+#
+# # create an object
+# {obj} = ...
+#
+# print({obj}.temperature)
+
+class Celsius:
+    def __init__(self, temperature=0):
+        self._temperature = temperature
+
+    @property
+    def celsius_to_farenheit(self):
+        return (self._temperature * 1.8) + 32
+
+temp = Celsius(35)
+print('temp. in fahrenheit:', temp.celsius_to_farenheit)
+# OUTPUT: temp. in fahrenheit: 95.0
+
