@@ -16,17 +16,19 @@ class GardenMeta(type):
 
 
 class Garden(metaclass=GardenMeta):
-    def __init__(self, fruits, gardener, pests):
+    def __init__(self, fruits, gardener, fruit_insects):  # + vegetable_insects, vegetables
         # self.vegetables = vegetables
-        self.fruits = fruits
-        self.pests = pests
         self.gardener = gardener
+        self.fruits = fruits
+        self.fruit_insects = fruit_insects
+        # self.vegetable_insects = vegetable_insects
 
     def show_the_garden(self):
         print(f'I am gardener - {self.gardener}')
         # print(f'I have such vegetables {self.vegetables}')
         print(f'There are {len(self.fruits)} apples in the garden.')
-        print(f'There are {self.pests} pests in the garden!!!')
+        print(f'There are {self.fruit_insects} fruit insects in the garden!!!')
+        # print(f'There are {self.vegetable_insects} vegetable insects in the garden!!!')
 
 
 # class Vegetables:
@@ -75,6 +77,9 @@ class Fruits:
 #
 #     def print_state(self):
 #         print(f"{self.vegetable_type}, {self.number_of_tomatoes} , {self.states}")
+#
+#     def eatable(self):
+#         return self.states == 3 or self.states == 2
 
 
 class Apple(Fruits):
@@ -90,6 +95,9 @@ class Apple(Fruits):
 
     def is_ripe(self):
         return self.states == 3
+
+    def eatable(self):
+        return self.states == 3 or self.states == 2
 
     def print_state(self):
         print(f"{self.fruits_type}, {self.number_of_apples} , {self.states}")
@@ -144,9 +152,13 @@ class AppleTree:
     def give_away_all(self):
         self.apples = []
 
-    # def poison_all_pests(self):
-    #     self.pests = []
-    #
+    def insects_attack(self, fruit_pests):
+        for _ in range(fruit_pests.pests_quantity):
+            for apple in self.apples:
+                index = self.apples.index(apple)
+                if apple.eatable():
+                    self.apples.pop(index)
+                    break
 
 
 class Pests:
@@ -154,16 +166,15 @@ class Pests:
         self.pests_type = pests_type
         self.pests_quantity = pests_quantity
 
-    # def eat_gardenstuff(self):
-    #     ??????????
-    #
+    def kill(self):
+        self.pests_quantity = 0
 
 
 class Gardener:
     def __init__(self, name, plants):
         self.name = name
         self.plants = plants
-        # self.insects = Pests
+        # self.pests = Pests
 
     def work(self):
         for plant in self.plants:
@@ -176,29 +187,32 @@ class Gardener:
             else:
                 print('Too early to harvest')
 
-    @staticmethod
-    def check_garden_state(insects_quantity):
-        if insects_quantity > 0:
-            print(f'There are {insects_quantity} pests in the garden! You need to handle them!')
+    def poison_fruit_pests(self, insects: Pests):
+        if insects.pests_quantity > 0:
+            insects.kill()
+            print('GREAT job done! There are no fruit insects in the garden now!')
         else:
-            print('GREAT! There are no pests in the garden!')
+            print('There are no fruit insects in the garden! You can have a rest!')
 
-    # def poison_pests(self):
-    #     for plant in self.plants:
-    #         plant.poison_all_pests()
+    # def poison_vegetable_pests(self, vegetable_pests):
+    #     if vegetable_pests.pests_quantity:
+    #         vegetable_pests.pests_quantity = 0
+    #         print('GREAT job done! There are no vegetable insects in the garden now!')
+    #     else:
+    #         print('There are no vegetable insects in the garden! You can have a rest!')
 
 
 # tomato_bush = TomatoBush(4, 3)
 
-
-apple_tree = AppleTree(4)
-insects = Pests('worm', 3)
+apple_tree = AppleTree(6)
+fruit_pests = Pests('worm', 4)
+# vegetable_pests = Pests('snail', 0)
 
 # john = Gardener('John', [tomato_bush, apple_tree])
 tom = Gardener('Tom', [apple_tree])
 
 # garden = Garden(tomato_bush, apple_tree)
-garden = Garden(fruits=apple_tree.apples, gardener=tom.name, pests=insects.pests_quantity)
+garden = Garden(fruits=apple_tree.apples, gardener=tom.name, fruit_insects=fruit_pests.pests_quantity)
 garden.show_the_garden()
 
 # print('There are', len(apple_tree.apples), 'apples in the garden!!!')
@@ -211,8 +225,15 @@ tom.work()
 tom.work()
 tom.work()
 
-tom.check_garden_state(insects.pests_quantity)
-# Gardener.check_garden_state(insects.pests_quantity)
+
+apple_tree.insects_attack(fruit_pests)
+
+garden.show_the_garden()
+
+
+tom.poison_fruit_pests(fruit_pests)
+# tom.poison_vegetable_pests(vegetable_pests)
+garden.show_the_garden()
 
 #
 # tom.poison_pests()
