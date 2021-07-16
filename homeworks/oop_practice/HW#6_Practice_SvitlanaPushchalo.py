@@ -212,6 +212,7 @@ tom.work()
 tom.work()
 
 tom.check_garden_state(insects.pests_quantity)
+# Gardener.check_garden_state(insects.pests_quantity)
 
 #
 # tom.poison_pests()
