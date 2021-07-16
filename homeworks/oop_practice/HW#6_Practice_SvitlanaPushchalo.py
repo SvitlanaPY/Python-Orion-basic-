@@ -231,13 +231,13 @@ apple_tree.insects_attack(fruit_pests)
 garden.show_the_garden()
 
 
-tom.poison_fruit_pests(fruit_pests)
+# tom.poison_fruit_pests(fruit_pests)
 # tom.poison_vegetable_pests(vegetable_pests)
-garden.show_the_garden()
+# garden.show_the_garden()
 
 #
 # tom.poison_pests()
-# tom.harvest()
+tom.harvest()
 #
 
 # Gardener.poison_pests(tom.plants)
