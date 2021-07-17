@@ -236,6 +236,5 @@ garden.show_the_garden()
 tom.harvest()
 print(apple_tree.apples)
 
-# Gardener.poison_pests(tom.plants)
+# Gardener.poison_pests(Pests.pests_quantity)
 
-# print(tomato.tomatoes)
