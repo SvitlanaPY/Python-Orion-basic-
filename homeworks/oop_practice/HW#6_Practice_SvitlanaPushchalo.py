@@ -68,7 +68,7 @@ class Fruits:
 #         self.states = 0
 #
 #     def growth(self):
-#         if self.states <= 3:
+#         if self.states < 3:
 #             self.states += 1
 #         self.print_state()
 #
@@ -89,7 +89,7 @@ class Apple(Fruits):
         self.states = 0
 
     def growth(self):
-        if self.states <= 3:
+        if self.states < 3:
             self.states += 1
         self.print_state()
 
@@ -174,7 +174,6 @@ class Gardener:
     def __init__(self, name, plants):
         self.name = name
         self.plants = plants
-        self.pests = Pests
 
     def work(self):
         for plant in self.plants:
@@ -187,10 +186,11 @@ class Gardener:
             else:
                 print('Too early to harvest')
 
-    def poison_fruit_pests(self, insects):
+    @staticmethod
+    def poison_fruit_pests(insects):
         if insects.pests_quantity > 0:
-            print('All fruit insects are killed!')
             insects.kill()
+            print('All fruit insects are killed!')
         else:
             print('There are no fruit insects in the garden! You can have a rest!')
 
@@ -201,24 +201,20 @@ class Gardener:
     #         print('There are no vegetable insects in the garden! You can have a rest!')
 
 
-# tomato_bush = TomatoBush(4, 3)
-
 apple_tree = AppleTree(6)
 fruit_pests = Pests('worm', 4)
+
+# tomato_bush = TomatoBush(4, 3)
 # vegetable_pests = Pests('snail', 0)
 
-# tom = Gardener('Tom', [tomato_bush, apple_tree])
 tom = Gardener('Tom', [apple_tree])
 
-# garden = Garden(tomato_bush, apple_tree)
+# tom = Gardener('Tom', [tomato_bush, apple_tree])
+
 garden = Garden(fruits=apple_tree.apples, gardener=tom.name, fruit_insects=fruit_pests)
 garden.show_the_garden()
 
-# print('There are', len(apple_tree.apples), 'apples in the garden!!!')
-# print(f'There are {apple_tree.count_of_apples()} apples in the garden!')
-
-# print('There are', len(tomato.tomatoes), 'tomatoes in the garden!!!')
-# print(f'There are {tomatoes.count_of_tomatoes()} tomatoes in the garden!')
+# garden = Garden(tomato_bush, apple_tree)
 
 tom.work()
 tom.work()
@@ -228,13 +224,12 @@ garden.show_the_garden()
 apple_tree.insects_attack(fruit_pests)
 garden.show_the_garden()
 
+# Gardener.poison_fruit_pests(fruit_pests)
 tom.poison_fruit_pests(fruit_pests)
-# tom.poison_vegetable_pests(vegetable_pests)
 garden.show_the_garden()
 
-# tom.poison_pests()
+# tom.poison_vegetable_pests(vegetable_pests)
+# garden.show_the_garden()
+
 tom.harvest()
 print(apple_tree.apples)
-
-# Gardener.poison_pests(Pests.pests_quantity)
-
