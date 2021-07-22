@@ -7,6 +7,7 @@
 # Результатом виконнання завдання повинно бути:
 # 1. словник елементами якого буде пара ключ:значення де ключ - мітка часу,
 # значення - репліка в даний момент часу
+#
 # 2. файл в якому знаходиться текст з якого видалені всі мітки часу. всі
 # субтитри повинні мати вигляд простого тексту.
 # Це означає що окрім видалення міток часу, вам потрібно видалити переноси рядків
@@ -15,8 +16,7 @@
 # 1.1:
 file = open("task1.txt")
 x = file.read().splitlines()
-print('list=', x)
-
+# print('list=', x)
 dict_t = {}
 for i in range(len(x)):
      if i % 2 == 0:
@@ -32,20 +32,17 @@ file.close()
 # 1.2
 with open("task1.txt") as file3, open("task1_copy.txt", "w+") as file4:
     y = file3.read().splitlines()
-    print('task1.txt:', y)
+    print('(y) task1.txt:', y)
     for i in range(0, len(y)-1, 2):
         file4.write(y[i+1] + ' ')
 
-with open("task1_copy.txt") as file4:
-    print(file4.read())
-#
-#
-# # """
+
+# """
 # Task 2
 # в файлі task2 збережений список, відкрийте цей файл, прочитайте вміст,
 # і знайдіть середнє арифметичне чисел що знаходяться в списку
 # """
-#
+
 import pickle
 file = open("task2", "rb")
 byte_data = file.read()
@@ -58,4 +55,64 @@ print(average1)
 # OUTPUT: 187.52631578947367
 print(average2)
 # OUTPUT: 187
+
+
+# """
+# Task3
+# Використовуючи openpyxl (або будь-яку іншу зручну для вас бібліотеку),
+# напишіть контекстний менеджер для роботи з ексель.
+# Даний менеджер повинен бути аналогом методу open().
+# """
+
+import openpyxl
+
+class OpenExcelFile:
+    def __init__(self, path, mode):
+        self.excel_file = openpyxl.open(path, mode)
+        self.path = path
+
+    def __enter__(self):
+        return self.excel_file
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if exc_type == None:
+            self.excel_file.save(self.path)
+            self.excel_file.close()
+            print('NO ERRORS happened. File SAVED successfully and CLOSED')
+
+        elif exc_type == Exception:
+            print("EXCEPTION HAPPENED!!!")
+            self.excel_file.close()
+            print('File CLOSED on error. Data are NOT saved!')
+            # return True
+
+
+with OpenExcelFile("Excel.xlsx", False) as excel_file:
+    # excel_file = open("Excel.xlsx")
+    sheet = excel_file.active
+    sheet[3][5].value = "HELLO WORLD"
+    print(f'Saving {sheet[3][5].value} in cell "F3"')
+    # raise Exception
+
+print('The END!')
+
+# OUTPUT (in case of NO EXCEPTION):
+# Saving HELLO WORLD in cell "F3"
+# NO ERRORS happened. File SAVED successfully and CLOSED
+# The END!
+
+
+# OUTPUT (in case of EXCEPTION w return True):
+# Saving HELLO WORLD in cell "F3"
+# EXCEPTION HAPPENED!!!
+# File CLOSED on error. Data are NOT saved!
+# The END!
+
+
+# OUTPUT (in case of raise Exception but w/o return True):
+# Saving HELLO WORLD in cell "F3"
+# EXCEPTION HAPPENED!!!
+# File CLOSED on error. Data are NOT saved!
+# Traceback (most recent call last): ....     raise Exception
+
 
