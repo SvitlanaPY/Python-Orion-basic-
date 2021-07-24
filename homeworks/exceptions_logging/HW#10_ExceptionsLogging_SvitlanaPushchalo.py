@@ -18,9 +18,16 @@ def divide(val1, val2):
     else:
         return divv
 
+# def root(val1, val2):
+#     roott = val1 ** (1 / val2)
+#     return roott
+
 def root(val1, val2):
-    roott = val1 ** (1 / val2)
-    return roott
+    if val1 > 0:
+        roott = val1 ** (1 / val2)
+        return roott
+    else:
+        raise Exception
 
 def power(val1, val2):
     poww = val1 ** val2
@@ -60,13 +67,17 @@ while True:
     elif s == '/':
         print(divide(val1, val2))
 
+    # elif s == 'root':
+    #     print(root(val1, val2))
+
     elif s == 'root':
-        print(root(val1, val2))
+        try:
+            print(root(val1, val2))
+        except:
+            print("Impossible to find the root from negative number")
 
     elif s == '**':
         print(power(val1, val2))
 
     elif s == '%':
         print(percentage(val1, val2))
-
-
