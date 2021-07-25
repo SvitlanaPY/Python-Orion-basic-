@@ -54,8 +54,6 @@ class Calc:
                 print(f'Invalid input, it must be number')
                 continue
             s = input("Choose math operation: (+, -, *, **, /, %, 'root'): ")
-            if s == "q":
-                break
             if s not in ('+', '-', '*', '**', '/', 'root', '%'):
                 continue
             try:

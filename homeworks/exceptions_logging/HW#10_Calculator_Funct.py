@@ -45,8 +45,6 @@ while True:
         print(f'Invalid input, enter some number')
         continue
     s = input("Choose math operation: (+, -, *, **, /, %, 'root'): ")
-    if s == "q":
-        break
     if s not in ('+', '-', '*', '**', '/', 'root', '%'):
         continue
     try:
