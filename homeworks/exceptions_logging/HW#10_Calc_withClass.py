@@ -1,5 +1,3 @@
-import logging
-
 class Calc:
     def __init__(self, val1, math_operation, val2):
         self.val1 = val1
