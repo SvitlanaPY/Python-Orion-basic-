@@ -1,0 +1,136 @@
+svitlana@svitlana-HP-ProBook-455-G1:~/Projects/Python-Orion-basic-/homeworks/testing$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
+
+Trying:
+    Calc.div(0.0, 5)
+Expecting:
+    0.0
+ok
+Trying:
+    Calc.div(10, 7)
+Expecting:
+    1.43
+ok
+Trying:
+    Calc.div('div', 2)
+Expecting:
+    ValueError('Invalid input, enter some number')
+ok
+Trying:
+    Calc.div(10, 0)
+Expecting:
+    ZeroDivisionError('Divisor is zero!')
+ok
+Trying:
+    Calc.minus(0, 10)
+Expecting:
+    -10
+ok
+Trying:
+    Calc.minus(100, 50.0)
+Expecting:
+    50.0
+ok
+Trying:
+    Calc.minus('b', 5)
+Expecting:
+    ValueError('Invalid input, enter some number')
+ok
+Trying:
+    Calc.mul(-5, 5)
+Expecting:
+    -25
+ok
+Trying:
+    Calc.mul(5, 10.0)
+Expecting:
+    50.0
+ok
+Trying:
+    Calc.mul('c', 2)
+Expecting:
+    ValueError('Invalid input, enter some number')
+ok
+Trying:
+    Calc.perc(35, 500)
+Expecting:
+    175.0
+ok
+Trying:
+    Calc.perc(0, 10)
+Expecting:
+    0.0
+ok
+Trying:
+    Calc.perc('perc', 25)
+Expecting:
+    ValueError('Invalid input, enter some number')
+ok
+Trying:
+    Calc.pow(0.0, 0)
+Expecting:
+    1.0
+ok
+Trying:
+    Calc.pow(0.0, 1)
+Expecting:
+    0.0
+ok
+Trying:
+    Calc.pow(-5, 11)
+Expecting:
+    -48828125
+ok
+Trying:
+    Calc.pow('pow', 2)
+Expecting:
+    ValueError('Invalid input, enter some number')
+ok
+Trying:
+    Calc.root(125.0, 3)
+Expecting:
+    5.0
+ok
+Trying:
+    Calc.root(255, 2)
+Expecting:
+    15.97
+ok
+Trying:
+    Calc.root(-625, 4)
+Expecting:
+    ValueError('Impossible to find the root from negative number')
+ok
+Trying:
+    Calc.root('root', 2)
+Expecting:
+    ValueError('Invalid input, enter some number')
+ok
+Trying:
+    Calc.sum(2, 3)
+Expecting:
+    5
+ok
+Trying:
+    Calc.sum(0.0, 1)
+Expecting:
+    1.0
+ok
+Trying:
+    Calc.sum('a', 5)
+Expecting:
+    ValueError('Invalid input, enter some number')
+ok
+2 items had no tests:
+    HW#11_DocTests_SvitlanaPushchalo
+    HW#11_DocTests_SvitlanaPushchalo.Calc
+7 items passed all tests:
+   4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.div
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.minus
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.mul
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.perc
+   4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.pow
+   4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.root
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.sum
+24 tests in 9 items.
+24 passed and 0 failed.
+Test passed.

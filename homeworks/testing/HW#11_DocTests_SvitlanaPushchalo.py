@@ -8,10 +8,8 @@ class Calc:
         :return: (int, float)
         >>> Calc.sum(2, 3)
         5
-        >>> Calc.sum(2.0, 4.0)
-        6.0
-        >>> Calc.sum(0.0, 0)
-        0.0
+        >>> Calc.sum(0.0, 1)
+        1.0
         >>> Calc.sum('a', 5)
         ValueError('Invalid input, enter some number')
         """
@@ -29,8 +27,6 @@ class Calc:
         :return: (int, float)
         >>> Calc.minus(0, 10)
         -10
-        >>> Calc.minus(20, 0)
-        20
         >>> Calc.minus(100, 50.0)
         50.0
         >>> Calc.minus('b', 5)
@@ -48,8 +44,6 @@ class Calc:
         :param a: (int, float)
         :param b: (int, float)
         :return: (int, float)
-        >>> Calc.mul(0.0, 0)
-        0.0
         >>> Calc.mul(-5, 5)
         -25
         >>> Calc.mul(5, 10.0)
@@ -71,8 +65,6 @@ class Calc:
         :return: float
         >>> Calc.div(0.0, 5)
         0.0
-        >>> Calc.div(100, 100)
-        1.0
         >>> Calc.div(10, 7)
         1.43
         >>> Calc.div('div', 2)
@@ -99,10 +91,8 @@ class Calc:
         1.0
         >>> Calc.pow(0.0, 1)
         0.0
-        >>> Calc.pow(-5, 3)
-        -125
-        >>> Calc.pow(5, 12)
-        244140625
+        >>> Calc.pow(-5, 11)
+        -48828125
         >>> Calc.pow('pow', 2)
         ValueError('Invalid input, enter some number')
         """
@@ -153,3 +143,6 @@ class Calc:
             return a * b / 100
         else:
             return ValueError('Invalid input, enter some number')
+
+# In PyCharm in Terminal run the following command:
+# svitlana@svitlana-HP-ProBook-455-G1:~/Projects/Python-Orion-basic-/homeworks/testing$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
