@@ -144,5 +144,4 @@ class Calc:
         else:
             return ValueError('Invalid input, enter some number')
 
-# In PyCharm in Terminal run the following command:
-# svitlana@svitlana-HP-ProBook-455-G1:~/Projects/Python-Orion-basic-/homeworks/testing$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
+# In PyCharm in Terminal run the following command: $ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
