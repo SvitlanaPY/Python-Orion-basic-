@@ -53,7 +53,7 @@ class Calc:
             try:
                 self.val1 = float(input("Enter val1: "))
             except ValueError:
-                print(f'Invalid input, it must be number')
+                print('Invalid input, it must be number')
                 logging.error("ERROR: Invalid input for val1")
                 continue
             s = input("Choose math operation: (+, -, *, **, /, %, 'root'): ")
@@ -62,7 +62,7 @@ class Calc:
             try:
                 self.val2 = float(input("Enter val2: "))
             except ValueError:
-                print(f'Invalid input, enter some number')
+                print('Invalid input, enter some number')
                 logging.error('Invalid input for val2')
                 continue
 
