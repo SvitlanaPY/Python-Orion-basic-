@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 class Calc:
     @staticmethod
     def sum(a, b):
