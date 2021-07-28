@@ -1,0 +1,155 @@
+class Calc:
+    @staticmethod
+    def sum(a, b):
+        """
+        Given two integers or floats, compute their sum.
+        :param a: (int, float)
+        :param b: (int, float)
+        :return: (int, float)
+        >>> Calc.sum(2, 3)
+        5
+        >>> Calc.sum(2.0, 4.0)
+        6.0
+        >>> Calc.sum(0.0, 0)
+        0.0
+        >>> Calc.sum('a', 5)
+        ValueError('Invalid input, enter some number')
+        """
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            return a + b
+        else:
+            return ValueError('Invalid input, enter some number')
+
+    @staticmethod
+    def minus(a, b):
+        """
+        Given two integers or floats, compute their subtraction.
+        :param a: (int, float)
+        :param b: (int, float)
+        :return: (int, float)
+        >>> Calc.minus(0, 10)
+        -10
+        >>> Calc.minus(20, 0)
+        20
+        >>> Calc.minus(100, 50.0)
+        50.0
+        >>> Calc.minus('b', 5)
+        ValueError('Invalid input, enter some number')
+        """
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            return a - b
+        else:
+            return ValueError('Invalid input, enter some number')
+
+    @staticmethod
+    def mul(a, b):
+        """
+        Given two integers or floats, compute their multiplication.
+        :param a: (int, float)
+        :param b: (int, float)
+        :return: (int, float)
+        >>> Calc.mul(0.0, 0)
+        0.0
+        >>> Calc.mul(-5, 5)
+        -25
+        >>> Calc.mul(5, 10.0)
+        50.0
+        >>> Calc.mul('c', 2)
+        ValueError('Invalid input, enter some number')
+        """
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            return a * b
+        else:
+            return ValueError('Invalid input, enter some number')
+
+    @staticmethod
+    def div(a, b):
+        """
+        Given two integers or floats, compute their division.
+        :param a: (int, float)
+        :param b: (int, float)
+        :return: float
+        >>> Calc.div(0.0, 5)
+        0.0
+        >>> Calc.div(100, 100)
+        1.0
+        >>> Calc.div(10, 7)
+        1.43
+        >>> Calc.div('div', 2)
+        ValueError('Invalid input, enter some number')
+        >>> Calc.div(10, 0)
+        ZeroDivisionError('Divisor is zero!')
+        """
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            if b != 0:
+                return round((a / b), 2)
+            else:
+                return ZeroDivisionError("Divisor is zero!")
+        else:
+            return ValueError('Invalid input, enter some number')
+
+    @staticmethod
+    def pow(a, b):
+        """
+        Given two integers or floats, compute the power of a number.
+        :param a: (int, float)
+        :param b: (int, float)
+        :return: (int, float)
+        >>> Calc.pow(0.0, 0)
+        1.0
+        >>> Calc.pow(0.0, 1)
+        0.0
+        >>> Calc.pow(-5, 3)
+        -125
+        >>> Calc.pow(5, 12)
+        244140625
+        >>> Calc.pow('pow', 2)
+        ValueError('Invalid input, enter some number')
+        """
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            return a ** b
+        else:
+            return ValueError('Invalid input, enter some number')
+
+    @staticmethod
+    def root(a, b):
+        """
+        Given two integers or floats, compute the root of a number.
+        :param a: (int, float)
+        :param b: (int, float)
+        :return: float
+        >>> Calc.root(125.0, 3)
+        5.0
+        >>> Calc.root(255, 2)
+        15.97
+        >>> Calc.root(-625, 4)
+        ValueError('Impossible to find the root from negative number')
+        >>> Calc.root('root', 2)
+        ValueError('Invalid input, enter some number')
+        """
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            if a > 0:
+                return round((a ** (1 / b)), 2)
+            else:
+                return ValueError('Impossible to find the root from negative number')
+        else:
+            return ValueError('Invalid input, enter some number')
+
+    @staticmethod
+    def perc(a, b):
+        """
+        Given two integers or floats, compute 'a' percentage from 'b'.
+        :param a:(int, float)
+        :param b:(int, float)
+        :return: float
+        >>> Calc.perc(35, 500)
+        175.0
+        >>> Calc.perc(0, 10)
+        0.0
+        >>> Calc.perc('perc', 25)
+        ValueError('Invalid input, enter some number')
+        """
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            return a * b / 100
+        else:
+            return ValueError('Invalid input, enter some number')
