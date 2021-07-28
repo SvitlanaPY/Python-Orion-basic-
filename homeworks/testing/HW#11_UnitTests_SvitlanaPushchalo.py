@@ -67,10 +67,10 @@ class Calc:
         0.0
         >>> Calc.div(10, 7)
         1.43
-        >>> Calc.div('aaa', 2) # doctest: +IGNORE_EXCEPTION_DETAIL
+        >>> Calc.div('aaa', 2)
         Traceback (most recent call last):
             ...
-        TypeError: BLABLABLABLABLA
+        TypeError: unsupported operand type(s) for /: 'str' and 'int'
         >>> Calc.div(10, 0)
         Traceback (most recent call last):
             ...
@@ -131,7 +131,7 @@ class Calc:
         Given two integers or floats, compute 'a' percentage from 'b'.
         >>> Calc.perc(35, 500)
         175.0
-        >>> Calc.perc(0, 10) # doctest: +SKIP
+        >>> Calc.perc(0, 10)
         0.0
         >>> Calc.perc('aaa', 100)
         Traceback (most recent call last):
