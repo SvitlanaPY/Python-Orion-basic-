@@ -1,3 +1,5 @@
+from math import sqrt
+
 class Calc:
     @staticmethod
     def sum(a, b):
@@ -7,17 +9,16 @@ class Calc:
         5
         >>> Calc.sum(0.0, 1)
         1.0
-        >>> Calc.sum('a', 5)
-        ValueError('Invalid input, enter some number')
+        >>> Calc.sum('aaa', 5)
+        Traceback (most recent call last):
+            ...
+        TypeError: can only concatenate str (not "int") to str
 
         :param a: (int, float)
         :param b: (int, float)
         :return: (int, float)
         """
-        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-            return a + b
-        else:
-            return ValueError('Invalid input, enter some number')
+        return a + b
 
     @staticmethod
     def minus(a, b):
@@ -27,17 +28,16 @@ class Calc:
         -10
         >>> Calc.minus(100, 50.0)
         50.0
-        >>> Calc.minus('b', 5)
-        ValueError('Invalid input, enter some number')
+        >>> Calc.minus('aaa', 5)
+        Traceback (most recent call last):
+            ...
+        TypeError: unsupported operand type(s) for -: 'str' and 'int'
 
         :param a: (int, float)
         :param b: (int, float)
         :return: (int, float)
         """
-        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-            return a - b
-        else:
-            return ValueError('Invalid input, enter some number')
+        return a - b
 
     @staticmethod
     def mul(a, b):
@@ -47,8 +47,8 @@ class Calc:
         -25
         >>> Calc.mul(5, 10.0)
         50.0
-        >>> Calc.mul('c', 2)
-        ValueError('Invalid input, enter some number')
+        >>> Calc.mul('aaa', 2)
+        TypeError('Invalid input, enter some number')
 
         :param a: (int, float)
         :param b: (int, float)
@@ -57,7 +57,7 @@ class Calc:
         if isinstance(a, (int, float)) and isinstance(b, (int, float)):
             return a * b
         else:
-            return ValueError('Invalid input, enter some number')
+            return TypeError('Invalid input, enter some number')
 
     @staticmethod
     def div(a, b):
@@ -67,22 +67,20 @@ class Calc:
         0.0
         >>> Calc.div(10, 7)
         1.43
-        >>> Calc.div('div', 2)
-        ValueError('Invalid input, enter some number')
+        >>> Calc.div('aaa', 2)
+        Traceback (most recent call last):
+            ...
+        TypeError: unsupported operand type(s) for /: 'str' and 'int'
         >>> Calc.div(10, 0)
-        ZeroDivisionError('Divisor is zero!')
+        Traceback (most recent call last):
+            ...
+        ZeroDivisionError: division by zero
 
         :param a: (int, float)
         :param b: (int, float)
         :return: float
         """
-        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-            if b != 0:
-                return round((a / b), 2)
-            else:
-                return ZeroDivisionError("Divisor is zero!")
-        else:
-            return ValueError('Invalid input, enter some number')
+        return round((a / b), 2)
 
     @staticmethod
     def pow(a, b):
@@ -94,42 +92,38 @@ class Calc:
         0.0
         >>> Calc.pow(-5, 11)
         -48828125
-        >>> Calc.pow('pow', 2)
-        ValueError('Invalid input, enter some number')
+        >>> Calc.pow('aaa', 2)
+        Traceback (most recent call last):
+            ...
+        TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 
         :param a: (int, float)
         :param b: (int, float)
         :return: (int, float)
         """
-        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-            return a ** b
-        else:
-            return ValueError('Invalid input, enter some number')
+        return a ** b
 
     @staticmethod
-    def root(a, b):
+    def root(a):
         """
-        Given two integers or floats, compute the root of a number.
-        >>> Calc.root(125.0, 3)
+         Given integer or float, compute the root of a number.
+        >>> Calc.root(625.0)
+        25.0
+        >>> Calc.root(25)
         5.0
-        >>> Calc.root(255, 2)
-        15.97
-        >>> Calc.root(-625, 4)
-        ValueError('Impossible to find the root from negative number')
-        >>> Calc.root('root', 2)
-        ValueError('Invalid input, enter some number')
+        >>> Calc.root(-25)
+        Traceback (most recent call last):
+            ...
+        ValueError: math domain error
+        >>> Calc.root('aaa')
+        Traceback (most recent call last):
+            ...
+        TypeError: must be real number, not str
 
         :param a: (int, float)
-        :param b: (int, float)
         :return: float
         """
-        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-            if a > 0:
-                return round((a ** (1 / b)), 2)
-            else:
-                return ValueError('Impossible to find the root from negative number')
-        else:
-            return ValueError('Invalid input, enter some number')
+        return sqrt(a)
 
     @staticmethod
     def perc(a, b):
@@ -139,16 +133,15 @@ class Calc:
         175.0
         >>> Calc.perc(0, 10)
         0.0
-        >>> Calc.perc('perc', 25)
-        ValueError('Invalid input, enter some number')
+        >>> Calc.perc('aaa', 100)
+        Traceback (most recent call last):
+            ...
+        TypeError: unsupported operand type(s) for /: 'str' and 'int'
 
         :param a:(int, float)
         :param b:(int, float)
         :return: float
         """
-        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-            return a * b / 100
-        else:
-            return ValueError('Invalid input, enter some number')
+        return (a * b) / 100
 
 # In PyCharm in Terminal run the following command: $ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py

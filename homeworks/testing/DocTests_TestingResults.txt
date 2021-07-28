@@ -1,5 +1,4 @@
 svitlana@svitlana-HP-ProBook-455-G1:~/Projects/Python-Orion-basic-/homeworks/testing$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
-
 Trying:
     Calc.div(0.0, 5)
 Expecting:
@@ -11,14 +10,18 @@ Expecting:
     1.43
 ok
 Trying:
-    Calc.div('div', 2)
+    Calc.div('aaa', 2)
 Expecting:
-    ValueError('Invalid input, enter some number')
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for /: 'str' and 'int'
 ok
 Trying:
     Calc.div(10, 0)
 Expecting:
-    ZeroDivisionError('Divisor is zero!')
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
 ok
 Trying:
     Calc.minus(0, 10)
@@ -31,9 +34,11 @@ Expecting:
     50.0
 ok
 Trying:
-    Calc.minus('b', 5)
+    Calc.minus('aaa', 5)
 Expecting:
-    ValueError('Invalid input, enter some number')
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for -: 'str' and 'int'
 ok
 Trying:
     Calc.mul(-5, 5)
@@ -46,9 +51,9 @@ Expecting:
     50.0
 ok
 Trying:
-    Calc.mul('c', 2)
+    Calc.mul('aaa', 2)
 Expecting:
-    ValueError('Invalid input, enter some number')
+    TypeError('Invalid input, enter some number')
 ok
 Trying:
     Calc.perc(35, 500)
@@ -61,9 +66,11 @@ Expecting:
     0.0
 ok
 Trying:
-    Calc.perc('perc', 25)
+    Calc.perc('aaa', 100)
 Expecting:
-    ValueError('Invalid input, enter some number')
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for /: 'str' and 'int'
 ok
 Trying:
     Calc.pow(0.0, 0)
@@ -81,29 +88,35 @@ Expecting:
     -48828125
 ok
 Trying:
-    Calc.pow('pow', 2)
+    Calc.pow('aaa', 2)
 Expecting:
-    ValueError('Invalid input, enter some number')
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 ok
 Trying:
-    Calc.root(125.0, 3)
+    Calc.root(625.0)
+Expecting:
+    25.0
+ok
+Trying:
+    Calc.root(25)
 Expecting:
     5.0
 ok
 Trying:
-    Calc.root(255, 2)
+    Calc.root(-25)
 Expecting:
-    15.97
+    Traceback (most recent call last):
+        ...
+    ValueError: math domain error
 ok
 Trying:
-    Calc.root(-625, 4)
+    Calc.root('aaa')
 Expecting:
-    ValueError('Impossible to find the root from negative number')
-ok
-Trying:
-    Calc.root('root', 2)
-Expecting:
-    ValueError('Invalid input, enter some number')
+    Traceback (most recent call last):
+        ...
+    TypeError: must be real number, not str
 ok
 Trying:
     Calc.sum(2, 3)
@@ -116,9 +129,11 @@ Expecting:
     1.0
 ok
 Trying:
-    Calc.sum('a', 5)
+    Calc.sum('aaa', 5)
 Expecting:
-    ValueError('Invalid input, enter some number')
+    Traceback (most recent call last):
+        ...
+    TypeError: can only concatenate str (not "int") to str
 ok
 2 items had no tests:
     HW#11_DocTests_SvitlanaPushchalo
