@@ -32,7 +32,7 @@ class Calc:
         >>> Calc.minus(5, 'aaa')
         Traceback (most recent call last):
             ...
-        TypeError: unsupported operand type(s) for -: 'str' and 'int'
+        TypeError: unsupported operand type(s) for -: 'int' and 'str'
 
         :param a: first value, int/float
         :param b: second value, int/float
@@ -96,7 +96,7 @@ class Calc:
         >>> Calc.pow(2, 'aaa')
         Traceback (most recent call last):
             ...
-        TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+        TypeError: unsupported operand type(s) for ** or pow(): 'int' and 'str'
 
         :param a: value, int/float
         :param b: power, int/float

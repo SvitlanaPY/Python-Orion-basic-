@@ -10,11 +10,11 @@ Expecting:
     1.43
 ok
 Trying:
-    Calc.div('aaa', 2)
+    Calc.div(2, 'aaa') # doctest: +IGNORE_EXCEPTION_DETAIL
 Expecting:
     Traceback (most recent call last):
         ...
-    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+    TypeError: BLA-BLA-BLA-BLA-BLA
 ok
 Trying:
     Calc.div(10, 0)
@@ -34,11 +34,11 @@ Expecting:
     50.0
 ok
 Trying:
-    Calc.minus('aaa', 5)
+    Calc.minus(5, 'aaa')
 Expecting:
     Traceback (most recent call last):
         ...
-    TypeError: unsupported operand type(s) for -: 'str' and 'int'
+    TypeError: unsupported operand type(s) for -: 'int' and 'str'
 ok
 Trying:
     Calc.mul(-5, 5)
@@ -59,11 +59,6 @@ Trying:
     Calc.perc(35, 500)
 Expecting:
     175.0
-ok
-Trying:
-    Calc.perc(0, 10)
-Expecting:
-    0.0
 ok
 Trying:
     Calc.perc('aaa', 100)
@@ -88,11 +83,11 @@ Expecting:
     -48828125
 ok
 Trying:
-    Calc.pow('aaa', 2)
+    Calc.pow(2, 'aaa')
 Expecting:
     Traceback (most recent call last):
         ...
-    TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+    TypeError: unsupported operand type(s) for ** or pow(): 'int' and 'str'
 ok
 Trying:
     Calc.root(625.0)
@@ -142,10 +137,10 @@ ok
    4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.div
    3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.minus
    3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.mul
-   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.perc
+   2 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.perc
    4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.pow
    4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.root
    3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.sum
-24 tests in 9 items.
-24 passed and 0 failed.
+23 tests in 9 items.
+23 passed and 0 failed.
 Test passed.
