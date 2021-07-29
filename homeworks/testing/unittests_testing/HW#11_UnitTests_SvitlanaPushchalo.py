@@ -1,6 +1,5 @@
 import unittest
 from calc import Calc
-from math import sqrt
 
 
 class TestSum(unittest.TestCase):
@@ -112,7 +111,6 @@ class TestDiv(unittest.TestCase):
         self.assertEqual(Calc.div(-50, 2), -25)
         self.assertEqual(Calc.div(-5, -5), 1.0)
 
-
     def test_Division_RaiseExceptions(self):
         print('test_Division_RaiseExceptions')
         # self.assertRaises(ZeroDivisionError, Calc.div, 10, 0)
@@ -165,7 +163,7 @@ class TestPerc(unittest.TestCase):
 
     def test_Percentage_DataInputs(self):
         print('test_Percentage_DataInputs')
-        self.assertIsInstance(Calc.perc(1, 2), int)
+        self.assertIsInstance(Calc.perc(1, 2), float)
         self.assertIsInstance(Calc.perc(2.0, 2), float)
         self.assertIsInstance(Calc.perc(2, 3.0), float)
 
@@ -202,7 +200,6 @@ class TestRoot(unittest.TestCase):
         self.assertEqual(Calc.root(625), 25.0)
         self.assertEqual(Calc.root(4.0), 2.0)
 
-
     def test_Division_RaiseExceptions(self):
         print('test_Sqrt_RaiseExceptions')
         # self.assertRaises(ValueError, Calc.root, -25)
@@ -214,3 +211,7 @@ class TestRoot(unittest.TestCase):
 
     def tearDown(self) -> None:
         print('tearDown\n')
+
+
+if __name__ == '__main__':
+    unittest.main()
