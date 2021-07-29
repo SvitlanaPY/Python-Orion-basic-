@@ -145,4 +145,4 @@ class Calc:
         """
         return (a * b) / 100
 
-# In PyCharm in Terminal run the following command: $ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
+# In PyCharm in Terminal run the following command: ~$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py

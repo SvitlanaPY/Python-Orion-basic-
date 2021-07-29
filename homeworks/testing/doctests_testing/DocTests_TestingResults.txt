@@ -1,4 +1,4 @@
-svitlana@svitlana-HP-ProBook-455-G1:~/Projects/Python-Orion-basic-/homeworks/testing$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
+svitlana@svitlana-HP-ProBook-455-G1:~/Projects/Python-Orion-basic-/homeworks/testing/doctests_testing$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
 Trying:
     Calc.div(0.0, 5)
 Expecting:
