@@ -15,9 +15,9 @@ class Calc:
             ...
         TypeError: can only concatenate str (not "int") to str
 
-        :param a: (int, float)
-        :param b: (int, float)
-        :return: (int, float)
+        :param a: first value, int/float
+        :param b: second value, int/float
+        :return: sum of values, int/float/Exception
         """
         return a + b
 
@@ -29,14 +29,14 @@ class Calc:
         -10
         >>> Calc.minus(100, 50.0)
         50.0
-        >>> Calc.minus('aaa', 5)
+        >>> Calc.minus(5, 'aaa')
         Traceback (most recent call last):
             ...
         TypeError: unsupported operand type(s) for -: 'str' and 'int'
 
-        :param a: (int, float)
-        :param b: (int, float)
-        :return: (int, float)
+        :param a: first value, int/float
+        :param b: second value, int/float
+        :return: subtraction of values, int/float/Exception
         """
         return a - b
 
@@ -51,9 +51,9 @@ class Calc:
         >>> Calc.mul('aaa', 2)
         TypeError('Invalid input, enter some number')
 
-        :param a: (int, float)
-        :param b: (int, float)
-        :return: (int, float)
+        :param a: first value, int/float
+        :param b: second value, int/float
+        :return: multiplication of values, int/float/Exception
         """
         if isinstance(a, (int, float)) and isinstance(b, (int, float)):
             return a * b
@@ -68,39 +68,39 @@ class Calc:
         0.0
         >>> Calc.div(10, 7)
         1.43
-        >>> Calc.div('aaa', 2) # doctest: +IGNORE_EXCEPTION_DETAIL
+        >>> Calc.div(2, 'aaa') # doctest: +IGNORE_EXCEPTION_DETAIL
         Traceback (most recent call last):
             ...
-        TypeError: BLABLABLABLABLA
+        TypeError: BLA-BLA-BLA-BLA-BLA
         >>> Calc.div(10, 0)
         Traceback (most recent call last):
             ...
         ZeroDivisionError: division by zero
 
-        :param a: (int, float)
-        :param b: (int, float)
-        :return: float
+        :param a: first value, int/float
+        :param b: second value, int/float
+        :return: division of values, float/Exception
         """
         return round((a / b), 2)
 
     @staticmethod
     def pow(a, b):
         """
-        Given two integers or floats, compute the power of a number.
+        Given two integers or floats, rise a-number to the b-power.
         >>> Calc.pow(0.0, 0)
         1.0
         >>> Calc.pow(0.0, 1)
         0.0
         >>> Calc.pow(-5, 11)
         -48828125
-        >>> Calc.pow('aaa', 2)
+        >>> Calc.pow(2, 'aaa')
         Traceback (most recent call last):
             ...
         TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 
-        :param a: (int, float)
-        :param b: (int, float)
-        :return: (int, float)
+        :param a: value, int/float
+        :param b: power, int/float
+        :return: rise any number to the power, int/float/Exception
         """
         return a ** b
 
@@ -121,8 +121,8 @@ class Calc:
             ...
         TypeError: must be real number, not str
 
-        :param a: (int, float)
-        :return: float
+        :param a: value, int/float
+        :return: square root of any number, float
         """
         return sqrt(a)
 
@@ -139,9 +139,9 @@ class Calc:
             ...
         TypeError: unsupported operand type(s) for /: 'str' and 'int'
 
-        :param a:(int, float)
-        :param b:(int, float)
-        :return: float
+        :param a: percent, int/float
+        :param b: value, int/float
+        :return: percentage of any number, float/Exception
         """
         return (a * b) / 100
 
