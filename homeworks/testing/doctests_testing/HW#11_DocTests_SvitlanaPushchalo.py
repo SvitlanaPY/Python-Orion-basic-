@@ -139,6 +139,8 @@ class Calc:
         Traceback (most recent call last):
             ...
         TypeError: unsupported operand type(s) for /: 'str' and 'int'
+        >>> Calc.perc(10, 100)
+        9
 
         :param a: percent, int/float
         :param b: value, int/float
@@ -147,6 +149,7 @@ class Calc:
         return (a * b) / 100
 
 
-if __name__ == '__main__':
-    doctest.testmode()
+if __name__ == "__main__":
+    doctest.testmod()
 
+# to see outputs: ~$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
