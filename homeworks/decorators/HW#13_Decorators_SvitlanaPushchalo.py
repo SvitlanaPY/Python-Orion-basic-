@@ -3,16 +3,26 @@ print('Task1')
 # 1. Написати функцію яка в циклі зчитує з консолі введені користувачем дані і записує їх в список.
 # Написати декоратор який видасть час виконання роботи функції
 # """
-# def f():
-#     m = input('Enter some data: ')
-#     list_t = []
-#     while m != '.':
-#         list_t.append(m)
-#         m = input()
-#     return list_t
-#
-#
-# print('list_t:', f())
+from time import perf_counter
+def decorator1(f_):
+    def inner():
+        start = perf_counter()
+        f_()
+        elapsed = round((perf_counter() - start), 2)
+        return elapsed
+    return inner
+
+@decorator1
+def f():
+    m = input('Enter some data: ')
+    list_t = []
+    while m != '.':
+        list_t.append(m)
+        m = input()
+    return list_t
+
+# f = decorator1(f)
+print(f())
 
 
 print()
@@ -62,9 +72,6 @@ print('Task4')
 # 4. Написати функцію яка приймає на вхід ціле число n створює і повертає список цілих чисел від 0 до n.
 # Написати до цієї функції декоратор який всі елементи отриманого списку переведе в строковий тип даних
 # """
-def ff(k):
-    return list(range(k))
-
 def decorator(ff_):
     def inner():
         a = int(input('Enter some number: '))
@@ -73,7 +80,24 @@ def decorator(ff_):
         return new_list
     return inner
 
+def ff(k):
+    return list(range(k))
+
 ff = decorator(ff)
 # print(ff)   # <function decorator.<locals>.inner at 0x7f8f44d66280>
 print(ff())
 
+
+# (2):
+def decorator(ff_):
+    def inner():
+        a = int(input('Enter some number: '))
+        list_t = ff_(a)
+        new_list = [str(elem) for elem in list_t]
+        return new_list
+    return inner
+
+@decorator
+def ff(k):
+    return list(range(k))
+print(ff())
