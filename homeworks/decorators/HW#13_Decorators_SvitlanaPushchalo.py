@@ -73,6 +73,7 @@ def decorator(ff_):
         return new_list
     return inner
 
-inner_ = decorator(ff)
-print(inner_())
+ff = decorator(ff)
+# print(ff)   # <function decorator.<locals>.inner at 0x7f8f44d66280>
+print(ff())
 
