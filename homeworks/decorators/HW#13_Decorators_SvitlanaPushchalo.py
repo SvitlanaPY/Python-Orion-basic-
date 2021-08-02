@@ -6,10 +6,11 @@ print('Task1')
 from time import perf_counter
 def decorator1(f_):
     def inner():
-        start = perf_counter()
+        start_time = perf_counter()
         f_()
-        elapsed = round((perf_counter() - start), 2)
-        return elapsed
+        finish_time = perf_counter()
+        working_time = round((finish_time - start_time), 2)
+        return working_time
     return inner
 
 @decorator1
@@ -22,7 +23,7 @@ def f():
     return list_t
 
 # f = decorator1(f)
-print(f())
+print(f'function works {f()} seconds')
 
 
 print()
