@@ -34,12 +34,18 @@ print('Task2')
 # Важливо! Функція повинно повернути саме значення гіпотенузи як число, а декоратор повинен зробити вивід на екран
 # наприклад такого тексту “При катетах 3, 4 – гіпотенуза дорівнює 5”.
 # """
-# def hyp(katet1, katet2):
-#     hyp_p = (katet1 ** 2 + katet2 ** 2) ** 0.5
-#     return hyp_p
-#
-# hp = hyp(3, 4)
-# print('Hypotenuse =', hp)
+def decorator2(hyp_):
+    def inner(katet1, katet2):
+        hp = hyp_(katet1, katet2)
+        print(f"При катетах {katet1} та {katet2}, гіпотенуза буде {hp}")
+        return hp
+    return inner
+
+@decorator2
+def hyp(katet1, katet2):
+    return (katet1 ** 2 + katet2 ** 2) ** 0.5
+
+print(hyp(3, 4))
 
 
 print()
@@ -101,4 +107,5 @@ def decorator(ff_):
 @decorator
 def ff(k):
     return list(range(k))
+
 print(ff())
