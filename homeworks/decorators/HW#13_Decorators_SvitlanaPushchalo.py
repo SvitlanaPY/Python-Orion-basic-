@@ -1,34 +1,30 @@
 from time import perf_counter
-
-print('Task1')
+print("Task1")
 # """
 # 1. Написати функцію яка в циклі зчитує з консолі введені користувачем дані і записує їх в список.
 # Написати декоратор який видасть час виконання роботи функції
 # """
-def decorator1(f_):
+def decorator1(func_):
     def inner():
         start_time = perf_counter()
-        f_()
+        func_()
         finish_time = perf_counter()
-        working_time = round((finish_time - start_time), 2)
-        return working_time
+        return round((finish_time - start_time), 2)
     return inner
 
 @decorator1
-def f():
-    m = input('Enter some data: ')
+def func():
+    m = input("Enter some data (or Q to exit): ")
     list_t = []
-    while m != '.':
+    while m != 'Q':
         list_t.append(m)
         m = input()
     return list_t
 
-# f = decorator1(f)
-print(f'function works {f()} seconds')
+print(f'function works {func()} seconds')
 
 
-print()
-print('Task2')
+print("\nTask2")
 # """
 # 2. Написати функцію яка приймає два катети і повертає значення гіпотензузи. Написати декоратор на функцію,
 # який виводить на екран текст з довжиною катетів і гіпотенузи.
@@ -38,8 +34,7 @@ print('Task2')
 def decorator2(hyp_):
     def inner(katet1, katet2):
         hp = hyp_(katet1, katet2)
-        print(f"При катетах {katet1} та {katet2}, гіпотенуза буде {hp}")
-        return hp
+        return print(f"При катетах {katet1} та {katet2}, гіпотенуза буде {hp}")
     return inner
 
 @decorator2
@@ -49,54 +44,37 @@ def hyp(katet1, katet2):
 print(hyp(3, 4))
 
 
-print()
-print('Task3')
+print("\nTask3")
 # """
 # 3. Написати функцію яка приймає список елементів і знаходить суму, до функції написати декоратор який перед тим як
 # запустити функцію видаляє з списку всі не чисельні типи даних, але якщо є строка яку можна перевести в число,
 # (наприклад “1”) то строка приводиться до чисельного типу даних
 # """
-# def summa(*args):
-#     sum_m = 0
-#     for i in args:
-#         if isinstance(i, (int, float)):
-#             sum_m += i
-#         elif isinstance(i, str):
-#             try:
-#                 i = float(i)
-#             except ValueError:
-#                 continue
-#             else:
-#                 sum_m += i
-#     return sum_m
-#
-#
-# print('SUM =', summa(5, 10, '4', 1, 'hi', 10.5, 6, '4.5'))
+def decorator3(summa_):
+    def inner(list_t):
+        new_list = []
+        for i in list_t:
+            try:
+                i = float(i)
+                new_list.append(i)
+            except ValueError:
+                continue
+        return summa_(new_list)
+    return inner
+
+@decorator3
+def summa(list_t):
+    return sum(list_t)
+
+lst = [5, 10, '4', 1, 'hi', 10.5, 6, '4.5', 5]
+print(summa(lst))
 
 
-print()
-print('Task4')
+print("\nTask4")
 # """
 # 4. Написати функцію яка приймає на вхід ціле число n створює і повертає список цілих чисел від 0 до n.
 # Написати до цієї функції декоратор який всі елементи отриманого списку переведе в строковий тип даних
 # """
-def decorator4(ff_):
-    def inner():
-        a = int(input('Enter some number: '))
-        list_t = ff_(a)
-        new_list = [str(elem) for elem in list_t]
-        return new_list
-    return inner
-
-def ff(k):
-    return list(range(k))
-
-ff = decorator4(ff)
-# print(ff)   # <function decorator.<locals>.inner at 0x7f8f44d66280>
-print(ff())
-
-
-# (2):
 def decor4(ff_):
     def inner():
         a = int(input('Enter some number: '))
