@@ -34,7 +34,8 @@ print("\nTask2")
 def decorator2(hyp_):
     def inner(katet1, katet2):
         hp = hyp_(katet1, katet2)
-        return print(f"При катетах {katet1} та {katet2}, гіпотенуза буде {hp}")
+        print(f"При катетах {katet1} та {katet2}, гіпотенуза буде {hp}")
+        return hp
     return inner
 
 @decorator2
@@ -42,7 +43,6 @@ def hyp(katet1, katet2):
     return (katet1 ** 2 + katet2 ** 2) ** 0.5
 
 print(hyp(3, 4))
-
 
 print("\nTask3")
 # """
@@ -85,6 +85,6 @@ def decor4(ff_):
 
 @decor4
 def ff(k):
-    return list(range(k))
+    return list(range(k+1))
 
 print(ff())
