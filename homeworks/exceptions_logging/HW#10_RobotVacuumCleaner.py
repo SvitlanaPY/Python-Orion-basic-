@@ -34,11 +34,11 @@ class Robot:
                 self.battery_charge -= Robot.BATTERY_REDUCE
                 print("MOVE")
                 self.wash()
-                self.vacuum_cleaner()
+                self.vacuum_clean()
             try:
                 if self.battery_charge <= 0:
                     raise NoPower
-                if self.battery_charge < 20:
+                elif self.battery_charge < 20:
                     raise BatteryChargeLower20
             except BatteryChargeLower20:
                 print("Battery charge is lower than 20")
@@ -55,7 +55,7 @@ class Robot:
         except NoWater:
             print("NO water! Fill in water tank, please!")
 
-    def vacuum_cleaner(self):
+    def vacuum_clean(self):
         try:
             if self.trash >= 100:
                 raise FullTrashBin
