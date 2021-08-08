@@ -66,7 +66,7 @@ print("TASK4:")
 """
 
 
-class DivDecorator:
+class DivBlock:
     def __init__(self, style_class):
         self.style_class = style_class
 
@@ -78,7 +78,7 @@ class DivDecorator:
         return inner1
 
 
-def body_decorator(get_names_page_):
+def body_block(get_names_page_):
     def inner2(*args):
         body_start = "<body>\n"
         body_end = "\n</body>"
@@ -109,8 +109,8 @@ def html_block(get_names_page_):
 
 @html_block
 @HeadBlock("*title*")
-@body_decorator
-@DivDecorator("*style_class*")
+@body_block
+@DivBlock("*style_class*")
 def get_names_page(names_list_):
     template_head = "<h3> User names: </h3>"
     string_ = template_head
