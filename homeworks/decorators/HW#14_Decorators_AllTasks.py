@@ -1,8 +1,8 @@
-print("\nTask1:")
-print("\nTask2:")
+print("\nTASK1:")
+print("\nTASK2:")
 
 
-print("\nTask3:")
+print("\nTASK3:")
 def div_block(style_class):
     def decor(get_names_page_):
         def inner(*args):
@@ -27,8 +27,8 @@ names_list = ["Misha", "Olya", "Vitaliy", "Vita"]
 print(get_names_page(names_list))
 
 
-print("\nTask4:")
-class DivDecorator:
+print("\nTASK4:")
+class DivBlock:
     def __init__(self, style_class):
         self.style_class = style_class
 
@@ -40,7 +40,7 @@ class DivDecorator:
         return inner1
 
 
-def body_decorator(get_names_page_):
+def body_block(get_names_page_):
     def inner2(*args):
         body_start = "<body>\n"
         body_end = "\n</body>"
@@ -71,8 +71,8 @@ def html_block(get_names_page_):
 
 @html_block
 @HeadBlock("*title*")
-@body_decorator
-@DivDecorator("*style_class*")
+@body_block
+@DivBlock("*style_class*")
 def get_names_page(names_list_):
     template_head = "<h3> User names: </h3>"
     string_ = template_head
