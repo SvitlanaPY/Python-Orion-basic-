@@ -7,7 +7,7 @@ print("TASK4:")
 <div class=*style_class*>
 <h3> User names: </h3>
 <p> Misha </p>
-<p> Olya </p>
+<p> Olia </p>
 <p> Vitaliy </p>
 <p> Vita </p>
 </div>
@@ -22,7 +22,7 @@ print("TASK4:")
 <div class=*style_class*>
 <h3> User names: </h3>
 <p> Misha </p>
-<p> Olya </p>
+<p> Olia </p>
 <p> Vitaliy </p>
 <p> Vita </p>
 </div>
@@ -38,7 +38,7 @@ print("TASK4:")
 <div class=*style_class*>
 <h3> User names: </h3>
 <p> Misha </p>
-<p> Olya </p>
+<p> Olia </p>
 <p> Vitaliy </p>
 <p> Vita </p>
 </div>
@@ -57,7 +57,7 @@ print("TASK4:")
 <div class=users_block>
 <h3> User names: </h3>
 <p> Misha </p>
-<p> Olya </p>
+<p> Olia </p>
 <p> Vitaliy </p>
 <p> Vita </p>
 </div>
@@ -113,12 +113,11 @@ def html_block(get_names_page_):
 @DivBlock("*style_class*")
 def get_names_page(names_list_):
     template_head = "<h3> User names: </h3>"
-    string_ = template_head
+    string_ = ''
     for i in names_list_:
-        template = "\n<p> {} </p>".format(i)
-        string_ = string_ + template
-    return string_
+        template_string = "\n<p> {} </p>".format(i)
+        string_ = string_ + template_string
+    return template_head + string_
 
-
-names_list = ["Misha", "Olya", "Vitaliy", "Vita"]
+names_list = ["Misha", "Olia", "Vitaliy", "Vita"]
 print(get_names_page(names_list))
