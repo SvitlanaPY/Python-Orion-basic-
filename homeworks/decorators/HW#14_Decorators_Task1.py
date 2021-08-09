@@ -17,7 +17,7 @@ def decor_out(*args_d):
             if len(args_d) == len(args_f) + 1:
                 for i in range(len(args_f)):
                     if type(args_f[i]) != args_d[i]:   # isinstance((args_f[i]), args_d[i])
-                        raise Exception("WRONG TYPE for function's argument")
+                        raise Exception("WRONG TYPE for function's parameter")
             else:
                 raise Exception("Function should get 1 parameter less than decorator!!!")
         return inner
@@ -30,3 +30,4 @@ def func(*args_f):
 
 
 print(func(1, 2.2, 4.0))
+# print(func(1, 2.2, 4, 5))
