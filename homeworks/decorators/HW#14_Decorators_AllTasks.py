@@ -1,4 +1,7 @@
 print("\nTASK1:")
+
+
+
 print("\nTASK2:")
 
 
@@ -16,11 +19,11 @@ def div_block(style_class):
 @div_block("*style_class*")
 def get_names_page(names_list_):
     template_head = "<h3> User names: </h3>"
-    string_ = template_head
+    string_ = ''
     for i in names_list_:
-        template = "\n<p> {} </p>".format(i)
-        string_ = string_ + template
-    return string_
+        template_string = "\n<p> {} </p>".format(i)
+        string_ = string_ + template_string
+    return template_head + string_
 
 
 names_list = ["Misha", "Olya", "Vitaliy", "Vita"]
@@ -75,11 +78,11 @@ def html_block(get_names_page_):
 @DivBlock("*style_class*")
 def get_names_page(names_list_):
     template_head = "<h3> User names: </h3>"
-    string_ = template_head
+    string_ = ''
     for i in names_list_:
-        template = "\n<p> {} </p>".format(i)
-        string_ = string_ + template
-    return string_
+        template_string = "\n<p> {} </p>".format(i)
+        string_ = string_ + template_string
+    return template_head + string_
 
 
 names_list = ["Misha", "Olya", "Vitaliy", "Vita"]

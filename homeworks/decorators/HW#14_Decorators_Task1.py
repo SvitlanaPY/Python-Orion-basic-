@@ -11,23 +11,32 @@ def func(1, 1.2, 4)
 можете написати власний ексепшин і кидати його тоді коли тип даних не відповідає тому, що очікується
 """
 
-def decor_out(*args_d):
-    def decor_in(func_):
+
+def check_types(*args_d):
+    def decor_in(summa_):
         def inner(*args_f):
             if len(args_d) == len(args_f) + 1:
                 for i in range(len(args_f)):
-                    if type(args_f[i]) != args_d[i]:   # isinstance((args_f[i]), args_d[i])
-                        raise Exception("WRONG TYPE for function's parameter")
+                    if type(args_f[i]) != args_d[i]:   # not isinstance((args_f[i]), args_d[i])
+                        raise Exception("WRONG TYPE for function's argument!!!")
+                result = summa_(*args_f)
+                if isinstance(result, args_d[-1]):
+                    return result
+                else:
+                    raise Exception("Function should return float")
             else:
                 raise Exception("Function should get 1 parameter less than decorator!!!")
         return inner
     return decor_in
 
 
-@decor_out(int, float, int, float)
-def func(*args_f):
-    pass
+@check_types(int, float, int, float)
+def summa(*args_f):
+    result = sum(args_f)
+    return result
 
 
-print(func(1, 2.2, 4.0))
-# print(func(1, 2.2, 4, 5))
+print(summa(1, 2.2, 4), "- function returns float")
+# print(summa(1.0, 2.2, 4))   # ==> Exception("WRONG TYPE for function's argument!!!")
+# print(summa(1, 2.2, 4, 5))  # ==> Exception("Function should get 1 parameter less than decorator!!!")
+# @check_types(int, float, int, int) with print(summa(1, 2.2, 3)) ==>  Exception("Function should return float")
