@@ -1,8 +1,32 @@
 print("\nTASK1:")
+def check_types(*args_d):
+    def decor_in(summa_):
+        def inner(*args_f):
+            if len(args_d) == len(args_f) + 1:
+                for i in range(len(args_f)):
+                    if type(args_f[i]) != args_d[i]:   # not isinstance((args_f[i]), args_d[i])
+                        raise Exception("WRONG TYPE for function's argument!!!")
+                result = summa_(*args_f)
+                if isinstance(result, args_d[-1]):
+                    return result
+                else:
+                    raise Exception("Function should return float")
+            else:
+                raise Exception("Function should get 1 parameter less than decorator!!!")
+        return inner
+    return decor_in
 
 
+@check_types(int, float, int, float)
+def summa(*args_f):
+    result = sum(args_f)
+    return result
 
-print("\nTASK2:")
+
+print(summa(1, 2.2, 4), "- function returns float")
+
+
+print("\nTASK2 (Те ж саме що й в TASK1, але через функтор):")
 
 
 print("\nTASK3:")
