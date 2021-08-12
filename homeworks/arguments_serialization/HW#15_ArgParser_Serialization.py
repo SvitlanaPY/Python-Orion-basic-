@@ -2,6 +2,8 @@ import json
 
 with open("users.json", "r") as file:
     data = json.load(file)
+    # data = [{'user_name': 'Kurt', 'last_name': 'Cobain', 'email': 'KurtCobain@gmail.com'}, {'user_name': 'Kate', 'last_name': 'Lee', 'email': 'KateLee@gmail.com'}, {'user_name': 'Nick', 'last_name': 'Rome', 'email': 'NickRome@gmail.com'}]
+    # print(type(data))   # <class 'list'>
     while True:
         user_name = input("Enter username (or Q to exit): ")
         if user_name == 'Q':
@@ -11,7 +13,6 @@ with open("users.json", "r") as file:
             break
         new_elem = {}
         for elem in data:
-            # print(elem['user_name'], '\nUSER', elem)
             if user_name == elem['user_name'] or email == elem['email']:
                 print("WARNING: User with such name or email already exists. Try again")
                 break
@@ -19,7 +20,6 @@ with open("users.json", "r") as file:
             new_elem['user_name'] = user_name
             new_elem['email'] = email
             data.append(new_elem)
-            # print(data)
     with open('users.json', 'w') as file_f:
         json.dump(data, file_f, indent=4)
 
