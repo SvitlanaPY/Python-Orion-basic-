@@ -1,5 +1,3 @@
-
-
 def decor(func):
     def wrap(*args, **kwargs):
         print("Start")
@@ -12,10 +10,10 @@ def decor(func):
 def decor_2(msg):
     def decor_in(func):
         def wrap(*args, **kwargs):
-            print("Start")
+            print("Start2")
             print(msg)
             result = func(*args, **kwargs)
-            print("Finish")
+            print("Finish2")
             return result
         return wrap
     return decor_in
@@ -25,3 +23,5 @@ def decor_2(msg):
 @decor
 def func_1():
     pass
+
+print(func_1())
