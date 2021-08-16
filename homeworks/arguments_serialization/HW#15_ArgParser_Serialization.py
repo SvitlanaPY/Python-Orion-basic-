@@ -27,12 +27,12 @@ print("THE END")
 
 
 # INPUTS FOR TESTING:
-# (1) positive case (such user does not exist in file):
+# (1) positive case (when entered user does not exist in file):
 # user_name = David
 # email = DavidJonson@gmail.com
 
 
-# (2) negative case (such user exists in a file):
+# (2) negative case (when entered user already exists in a file):
 # user_name = Nick
 # email = NickRome@gmail.com
 # OUTPUTS: "WARNING: User with such name or email already exists. Try again"
