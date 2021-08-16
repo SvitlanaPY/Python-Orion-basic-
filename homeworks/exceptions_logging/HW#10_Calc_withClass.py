@@ -77,7 +77,7 @@ class Calc:
 
             elif s == 'root':
                 try:
-                    print(root())
+                    print(self.root())
                 except:
                     print("Impossible to find the root from negative number")
 
