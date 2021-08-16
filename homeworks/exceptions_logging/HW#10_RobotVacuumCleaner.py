@@ -21,6 +21,7 @@ class NoPower(Exception):
 class Robot:
     WATER_REDUCE = 10
     BATTERY_REDUCE = 10
+    count = 0
 
     def __init__(self, battery_charge, trash, water):
         self.battery_charge = battery_charge
@@ -38,12 +39,18 @@ class Robot:
             try:
                 if self.battery_charge <= 0:
                     raise NoPower
-                elif self.battery_charge < 20:
+                elif self.battery_charge < 21:
                     raise BatteryChargeLower20
             except BatteryChargeLower20:
                 print("Battery charge is lower than 20")
             except NoPower:
                 print("NO power! Charge me, please!")
+                break
+                # self.count += 1
+                # if self.count <= 5:
+                #     print("NO power! Charge me, please!")
+                # else:
+                #     break
 
     def wash(self):
         try:
