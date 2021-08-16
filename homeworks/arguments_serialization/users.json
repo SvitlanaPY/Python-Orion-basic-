@@ -1,0 +1,17 @@
+[
+    {
+        "user_name": "Kurt",
+        "last_name": "Cobain",
+        "email": "KurtCobain@gmail.com"
+    },
+    {
+        "user_name": "Kate",
+        "last_name": "Lee",
+        "email": "KateLee@gmail.com"
+    },
+    {
+        "user_name": "Nick",
+        "last_name": "Rome",
+        "email": "NickRome@gmail.com"
+    }
+]
