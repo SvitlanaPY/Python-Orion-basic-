@@ -3,6 +3,8 @@
 всі параметри рівняння задати в змінні.
 """
 from math import sqrt
+import threading
+from time import time, sleep
 
 def equation(a, b, c):
     d = b ** 2 - 4 * a * c
