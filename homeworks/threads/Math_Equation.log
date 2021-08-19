@@ -1,82 +1,82 @@
-2021-08-19 16:43:29,277 - INFO - Main thread name: MainThread
-2021-08-19 16:43:29,279 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:29,279 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:29,279 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:29,279 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:30,278 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:30,279 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:30,280 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:30,280 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:30,280 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:30,280 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:31,280 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:31,280 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:31,280 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:31,281 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:31,281 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:31,281 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:32,282 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:32,282 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:32,283 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:32,283 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:32,283 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:32,283 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:32,284 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:32,284 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:32,284 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:32,284 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:32,284 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:32,285 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:32,285 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:32,285 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:32,285 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:32,285 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:32,285 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:32,285 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:33,285 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:33,285 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:33,285 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:33,285 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:33,286 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:33,286 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:33,286 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:33,286 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:33,286 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:33,286 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:34,287 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:34,287 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:34,288 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:34,288 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:34,288 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:34,288 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:35,289 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:35,290 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:35,290 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:35,291 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:36,292 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:36,292 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:36,292 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:36,293 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:36,293 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:36,293 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:36,293 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:36,293 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:36,294 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:36,294 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:36,294 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:36,294 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:36,294 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:36,295 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:36,296 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:36,296 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:37,297 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:37,297 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:37,298 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:37,298 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:38,297 - INFO - 'Equation1' assigned to thread: t1
-2021-08-19 16:43:38,298 - INFO - D > 0: x1= -3.0 and x2= -7.0
-2021-08-19 16:43:38,299 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:38,300 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:38,300 - INFO - 'Equation2' assigned to thread: t2
-2021-08-19 16:43:38,300 - INFO - D == 0: x1= 0.0
-2021-08-19 16:43:38,300 - INFO - working time= 9.02
+2021-08-19 16:55:47,600 - root - INFO - Main thread name: MainThread
+2021-08-19 16:55:48,602 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:48,602 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:48,602 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:48,602 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:48,602 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:48,603 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:49,604 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:49,604 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:49,604 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:49,605 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:49,605 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:49,605 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:50,606 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:50,607 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:50,606 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:50,607 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:50,607 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:50,607 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:51,608 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:51,608 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:51,608 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:51,609 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:51,609 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:51,609 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:52,610 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:52,610 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:52,610 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:52,611 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:52,612 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:52,612 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:52,613 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:52,613 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:52,613 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:52,614 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:52,614 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:52,614 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:53,615 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:53,615 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:53,615 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:53,616 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:54,617 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:54,618 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:54,618 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:54,618 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:55,619 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:55,619 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:55,619 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:55,620 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:55,620 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:55,620 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:55,620 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:55,620 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:55,621 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:55,621 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:55,621 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:55,621 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:56,620 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:56,620 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:56,622 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:56,623 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:57,622 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:57,622 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:57,624 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:57,624 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:57,624 - root - INFO - 'Equation1' assigned to thread: t1
+2021-08-19 16:55:57,624 - root - INFO - D > 0: x1= -3.0 and x2= -7.0
+2021-08-19 16:55:58,624 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:58,624 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:58,624 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:58,625 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:58,625 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:58,625 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:58,625 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:58,625 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:55:59,626 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:55:59,627 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:56:00,628 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:56:00,628 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:56:00,628 - root - INFO - 'Equation2' assigned to thread: t2
+2021-08-19 16:56:00,628 - root - INFO - D == 0: x1= 0.0
+2021-08-19 16:56:00,629 - root - INFO - working time= 13.03

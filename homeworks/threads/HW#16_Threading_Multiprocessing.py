@@ -19,13 +19,10 @@ def equation(a, b, c, func_name):
         print("'Equation{}' assigned to thread: {}".format(func_name, threading.current_thread().name))
         d = b ** 2 - 4 * a * c
         if d > 0:
-            lst = []
             x1 = ((-b) + sqrt(d)) / (2 * a)
-            lst.append(x1)
             x2 = ((-b) - sqrt(d)) / (2 * a)
-            lst.append(x2)
-            logging.info(f"D > 0: x1= {lst[0]} and x2= {lst[1]}")
-            print(f"D > 0: x1= {lst[0]} and x2= {lst[1]}")
+            logging.info(f"D > 0: x1= {x1} and x2= {x2}")
+            print(f"D > 0: x1= {x1} and x2= {x2}")
         elif d == 0:
             x1 = (-b) / (2 * a)
             logging.info(f"D == 0: x1= {x1}")
