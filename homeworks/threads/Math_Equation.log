@@ -1,0 +1,82 @@
+INFO:root:Main thread name: MainThread
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D == 0: x1= 0.0
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:'Equation1' assigned to thread: t1
+INFO:root:D == 0: x1= 0.0
+INFO:root:D > 0: x1= -3.0 and x2= -7.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:'Equation2' assigned to thread: t2
+INFO:root:D == 0: x1= 0.0
+INFO:root:working time= 11.02

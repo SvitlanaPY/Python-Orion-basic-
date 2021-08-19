@@ -3,16 +3,18 @@
 всі параметри рівняння задати в змінні.
 """
 
-
+import logging
 from math import sqrt
 from random import randint
 from time import time, sleep
 import threading
 
+logging.basicConfig(filename="Math_Equation.log", level=logging.INFO, filemode='a')
 
 def equation(a, b, c, func_name):
     for i in range(20):
         sleep(randint(0, 1))
+        logging.info("'Equation{}' assigned to thread: {}".format(func_name, threading.current_thread().name))
         print("'Equation{}' assigned to thread: {}".format(func_name, threading.current_thread().name))
         d = b ** 2 - 4 * a * c
         if d > 0:
@@ -21,15 +23,19 @@ def equation(a, b, c, func_name):
             lst.append(x1)
             x2 = ((-b) - sqrt(d)) / (2 * a)
             lst.append(x2)
+            logging.info(f"D > 0: x1= {lst[0]} and x2= {lst[1]}")
             print(f"D > 0: x1= {lst[0]} and x2= {lst[1]}")
         elif d == 0:
             x1 = (-b) / (2 * a)
+            logging.info(f"D == 0: x1= {x1}")
             print(f"D == 0: x1= {x1}")
         else:
+            logging.info("D < 0: No solution for equation1")
             print("D < 0: No solution for equation1")
 
 
 if __name__ == "__main__":
+    logging.info("Main thread name: {}".format(threading.main_thread().name))
     print("Main thread name: {}".format(threading.current_thread().name))
     # print("Main thread name: {}".format(threading.main_thread().name))
 
@@ -46,5 +52,7 @@ if __name__ == "__main__":
 
     finish_time = time()
 
+    logging.info("working time= {}".format(round((finish_time - start_time), 2)))
     print("\nworking time =", round((finish_time - start_time), 2))
+
     print("DONE!")
