@@ -9,7 +9,8 @@ from random import randint
 from time import time, sleep
 import threading
 
-logging.basicConfig(filename="Math_Equation.log", level=logging.INFO, filemode='a')
+FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename="Math_Equation.log", level=logging.INFO, filemode='a', format=FORMAT)
 
 def equation(a, b, c, func_name):
     for i in range(20):
