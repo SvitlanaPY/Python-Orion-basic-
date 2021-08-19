@@ -37,8 +37,8 @@ if __name__ == "__main__":
     print("Main thread name: {}".format(threading.current_thread().name))
     # print("Main thread name: {}".format(threading.main_thread().name))
 
-    t1 = threading.Thread(target=equation, name='t1', args=(1, 10, 21, 1,))
-    t2 = threading.Thread(target=equation, name='t2', args=(5, 0, 0, 2,))
+    t1 = threading.Thread(target=equation, name='t1', args=(1, 10, 21, 1))
+    t2 = threading.Thread(target=equation, name='t2', args=(5, 0, 0, 2))
 
     start_time = time()
 
