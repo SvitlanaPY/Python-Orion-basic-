@@ -140,7 +140,7 @@ class Calc:
             ...
         TypeError: unsupported operand type(s) for /: 'str' and 'int'
         >>> Calc.perc(10, 100)
-        9
+        10.0
 
         :param a: percent, int/float
         :param b: value, int/float
@@ -152,4 +152,5 @@ class Calc:
 if __name__ == "__main__":
     doctest.testmod()
 
-# to see outputs: ~$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py
+# to save outputs/testing results into file "DocTests_TestingResults.txt":
+# ~$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py > DocTests_TestingResults.txt
