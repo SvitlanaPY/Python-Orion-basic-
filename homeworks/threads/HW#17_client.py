@@ -20,7 +20,7 @@ def read_sock():
 server = ('192.168.1.105', 5050)
 alias = input("Your username: ")
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(('', 0))
+# sock.bind(('', 0))   - # unnecessary code
 sock.sendto(("[" + alias + "] Connect to server").encode('utf-8'), server)
 blocked_users = []
 
