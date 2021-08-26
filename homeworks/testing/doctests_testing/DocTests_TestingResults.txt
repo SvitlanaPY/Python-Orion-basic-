@@ -1,0 +1,150 @@
+Trying:
+    Calc.div(0.0, 5)
+Expecting:
+    0.0
+ok
+Trying:
+    Calc.div(10, 7)
+Expecting:
+    1.43
+ok
+Trying:
+    Calc.div(2, 'aaa') # doctest: +IGNORE_EXCEPTION_DETAIL
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: BLA-BLA-BLA-BLA-BLA
+ok
+Trying:
+    Calc.div(10, 0)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+ok
+Trying:
+    Calc.minus(0, 10)
+Expecting:
+    -10
+ok
+Trying:
+    Calc.minus(100, 50.0)
+Expecting:
+    50.0
+ok
+Trying:
+    Calc.minus(5, 'aaa')
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for -: 'int' and 'str'
+ok
+Trying:
+    Calc.mul(-5, 5)
+Expecting:
+    -25
+ok
+Trying:
+    Calc.mul(5, 10.0)
+Expecting:
+    50.0
+ok
+Trying:
+    Calc.mul('aaa', 2)
+Expecting:
+    TypeError('Invalid input, enter some number')
+ok
+Trying:
+    Calc.perc(35, 500)
+Expecting:
+    175.0
+ok
+Trying:
+    Calc.perc('aaa', 100)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+ok
+Trying:
+    Calc.perc(10, 100)
+Expecting:
+    10.0
+ok
+Trying:
+    Calc.pow(0.0, 0)
+Expecting:
+    1.0
+ok
+Trying:
+    Calc.pow(0.0, 1)
+Expecting:
+    0.0
+ok
+Trying:
+    Calc.pow(-5, 11)
+Expecting:
+    -48828125
+ok
+Trying:
+    Calc.pow(2, 'aaa')
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for ** or pow(): 'int' and 'str'
+ok
+Trying:
+    Calc.root(625.0)
+Expecting:
+    25.0
+ok
+Trying:
+    Calc.root(25)
+Expecting:
+    5.0
+ok
+Trying:
+    Calc.root(-25)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    ValueError: math domain error
+ok
+Trying:
+    Calc.root('aaa')
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: must be real number, not str
+ok
+Trying:
+    Calc.sum(2, 3)
+Expecting:
+    5
+ok
+Trying:
+    Calc.sum(0.0, 1)
+Expecting:
+    1.0
+ok
+Trying:
+    Calc.sum('aaa', 5)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: can only concatenate str (not "int") to str
+ok
+2 items had no tests:
+    HW#11_DocTests_SvitlanaPushchalo
+    HW#11_DocTests_SvitlanaPushchalo.Calc
+7 items passed all tests:
+   4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.div
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.minus
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.mul
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.perc
+   4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.pow
+   4 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.root
+   3 tests in HW#11_DocTests_SvitlanaPushchalo.Calc.sum
+24 tests in 9 items.
+24 passed and 0 failed.
+Test passed.
