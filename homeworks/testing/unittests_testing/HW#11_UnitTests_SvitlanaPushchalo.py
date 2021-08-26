@@ -215,3 +215,6 @@ class TestRoot(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+# $ python3 -m unittest -v HW#11_UnitTests_SvitlanaPushchalo.py
