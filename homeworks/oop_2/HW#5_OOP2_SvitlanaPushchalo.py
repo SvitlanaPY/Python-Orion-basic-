@@ -114,15 +114,15 @@ print('\n########## 5* ##########')
 class Concert:
     max_visitors_num = 0
     def __init__(self, visitors_count = 0):
-        self.visitors_count = visitors_count
+        self.__visitors_count = visitors_count
 
     @property
     def visitors_count(self):
-        return self._visitors_count
+        return self.__visitors_count
 
     @visitors_count.setter
     def visitors_count(self, count):
-        self._visitors_count = count if count <= Concert.max_visitors_num else Concert.max_visitors_num
+        self.__visitors_count = count if count <= Concert.max_visitors_num else Concert.max_visitors_num
 
 Concert.max_visitors_num = 50
 concert = Concert()
@@ -214,20 +214,20 @@ print('\n########## 9 ##########')
 #     country = "USA"
 
 class Person:
-    def __init__(self, name, country, age = 0):
+    def __init__(self, name, country, years_old=0):
         self.name = name
         self.country = country
-        self.age = age
+        self.__years_old = years_old
 
     @property
     def age(self):
         # print('Get age')
-        return self._age
+        return self.__years_old
 
     @age.setter
     def age(self, new_age):
         # print('Set age')
-        self._age = new_age
+        self.__years_old = new_age
 
 person = Person('John', 'USA', 36)
 print(person.age)
@@ -280,13 +280,12 @@ print('\n########## 11* ##########')
 
 class Celsius:
     def __init__(self, temperature=0):
-        self._temperature = temperature
+        self.__temperature = temperature
 
     @property
     def celsius_to_farenheit(self):
-        return (self._temperature * 1.8) + 32
+        return (self.__temperature * 1.8) + 32
 
 temp = Celsius(35)
 print('temp. in fahrenheit:', temp.celsius_to_farenheit)
 # OUTPUT: temp. in fahrenheit: 95.0
-
